@@ -1,0 +1,13 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" layout:decorator="layout/default">
+<head>
+  <title>Spring Boot and Thymeleaf - Spring Data JPA and Hibernate :: Home page</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="../../css/common.css" th:href="@{/css/common.css}" />
+</head>
+<body>
+<section layout:fragment="content">
+  <div><img src="../images/home.png" th:src="@{/images/home.png}" /> Home Page</div>
+  <p>Please <a href="user-list.html" th:href="@{/user-list.html}"><b>click</b></a> to see user list.</p>
+</section>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" layout:decorator="layout/default">
+<head>
+  <title>Spring Boot and Thymeleaf - Spring Data JPA and Hibernate :: User List</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="../../css/common.css" th:href="@{/css/common.css}" />
+</head>
+<body>
+<section layout:fragment="content">
+  <div><img src="../images/home.png" th:src="@{/images/home.png}" /> <a href="home.html" th:href="@{/}">Home Page</a> :: User List</div>
+  <h2>User List</h2>
+  <table>
+    <tr>
+      <th>Username</th>
+      <th>First name</th>
+      <th>Last name</th>
+    </tr>
+    <tr th:each="user : ${userlist}">
+      <td th:text="${user.username}">Username</td>
+      <td th:text="${user.firstName}">First name</td>
+      <td th:text="${user.lastName}">Last name</td>
+    </tr>
+  </table>
+</section>
+</body>
+</html>
